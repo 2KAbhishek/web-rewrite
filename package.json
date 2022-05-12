@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/2kabhishek/web-rewrite/issues"
   },
-  "homepage": "https://github.com/2kabhishek/web-rewrite#readme"
+  "homepage": "https://github.com/2kabhishek/web-rewrite#readme",
+  "dependencies": {
+    "node-appwrite": "^5.1.0"
+  }
 }
