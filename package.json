@@ -1,0 +1,25 @@
+{
+  "name": "web-rewrite",
+  "version": "1.0.0",
+  "description": "A web url shortener made with appwrite",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2kabhishek/web-rewrite.git"
+  },
+  "keywords": [
+    "node",
+    "appwrite",
+    "url-shortener",
+    "tools"
+  ],
+  "author": "2KAbhishek",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/2kabhishek/web-rewrite/issues"
+  },
+  "homepage": "https://github.com/2kabhishek/web-rewrite#readme"
+}
