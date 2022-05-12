@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/2kabhishek/web-rewrite#readme",
   "dependencies": {
+    "dotenv": "^16.0.1",
     "node-appwrite": "^5.1.0",
     "nodemon": "^2.0.16"
   }
