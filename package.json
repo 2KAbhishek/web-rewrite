@@ -4,7 +4,9 @@
   "description": "A web url shortener made with appwrite",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "setup": "node src/util/setup.js",
+    "dev": "nodemon index.js",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
