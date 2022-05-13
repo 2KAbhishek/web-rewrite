@@ -4,7 +4,7 @@
   "description": "A web url shortener made with appwrite",
   "main": "index.js",
   "scripts": {
-    "setup": "node src/util/setup.js",
+    "setup": "node src/util/setupCollection.js && node src/util/setupIndex.js",
     "dev": "nodemon index.js",
     "start": "node index.js"
   },
