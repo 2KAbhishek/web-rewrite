@@ -21,9 +21,9 @@ const setupLinksCollection = async () => {
       ["role:all"],
       ["role:all"]
     );
-    await database.createUrlAttribute(collectionID, "originalurl", true);
-    await database.createStringAttribute(collectionID, "uniquename", 255, true);
-    await database.createUrlAttribute(collectionID, "shorturl", true);
+    await database.createUrlAttribute(collectionID, "originalUrl", true);
+    await database.createStringAttribute(collectionID, "uniqueName", 255, true);
+    await database.createUrlAttribute(collectionID, "shortUrl", true);
     console.log("Links collection created");
   } catch (e) {
     console.log(e);
