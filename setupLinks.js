@@ -1,6 +1,6 @@
-const { linksCollectionID } = require("./src/util/env.js");
+const { linksCollectionID } = require("./src/util/env");
 
-const { sdk, client } = require("./src/util/client.js");
+const { sdk, client } = require("./src/util/client");
 
 const db = new sdk.Database(client);
 
@@ -21,6 +21,7 @@ const setupLinksCollection = async () => {
       true
     );
     await db.createUrlAttribute(linksCollectionID, "shortUrl", true);
+    await db.createIndex(linksCollectionID, "uniqueName", "key", ["uniqueName"]);
     console.log("Links collection created");
   } catch (e) {
     if (e.message.includes("already exists")) {
