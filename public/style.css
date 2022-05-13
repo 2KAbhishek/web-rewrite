@@ -1,0 +1,80 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-size: 2rem;
+}
+.container {
+  position: relative;
+  min-height: 100vh;
+  overflow: auto;
+  background-color: #0a0a15;
+}
+.inner-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  font-family: "Trebuchet MS", Geneva, Tahoma, sans-serif;
+  color: #1688f0;
+  text-align: center;
+}
+h1 {
+  font-size: 5rem;
+}
+.originalURL,
+.baseURL,
+.uniqueName {
+  border: none;
+  font-family: "Lucida Sans";
+  font-size: 2rem;
+  border-radius: 8px;
+  background-color: #052c52;
+  color: white;
+  text-align: center;
+  padding: 0.6rem;
+  border: 2px solid #1688f0;
+}
+.originalURL {
+  display: block;
+  margin: 2rem auto;
+  width: 36rem;
+}
+.baseURL,
+.uniqueName {
+  width: 16rem;
+  margin: auto 1rem;
+}
+.baseURL {
+  color: rgba(255, 255, 255, 0.7);
+}
+.btn {
+  display: block;
+  margin: 2rem auto;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #1688f0;
+  border: 5px solid white;
+  border-style: groove;
+  transition: all 0.3s;
+  font-family: "Trebuchet MS", Geneva, Tahoma, sans-serif;
+  font-size: 2rem;
+}
+.btn:hover {
+  background-color: white;
+}
+.success,
+.failure {
+  display: none;
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+.success .short {
+  display: block;
+  font-size: 1.5rem;
+  font-style: italic;
+  color: white;
+  cursor: pointer;
+}
