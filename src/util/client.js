@@ -1,4 +1,4 @@
-const { host, appWritePort, projectID, apiKey } = require("./env.js");
+const { host, appWritePort, projectID, apiKey } = require("./env");
 
 const sdk = require("node-appwrite");
 
