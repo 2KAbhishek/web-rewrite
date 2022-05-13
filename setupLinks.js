@@ -1,29 +1,39 @@
-require("dotenv").config();
+const {
+  host,
+  appWritePort,
+  projectID,
+  apiKey,
+  linksCollectionID,
+} = require("./src/util/env.js");
 
 const sdk = require("node-appwrite");
 
 const client = new sdk.Client();
 
 client
-  .setEndpoint(`http://${process.env.HOST}:${process.env.APPWRITE_PORT}/v1`) // Your API Endpoint
-  .setProject(process.env.PROJECT_ID) // Your project ID
-  .setKey(process.env.API_KEY); // Your secret API key
+  .setEndpoint(`http://${host}:${appWritePort}/v1`)
+  .setProject(projectID)
+  .setKey(apiKey);
+
 let database = new sdk.Database(client);
 
 const setupLinksCollection = async () => {
   try {
-    const collectionID = process.env.LINKS_COLLECTION_ID;
-
     await database.createCollection(
-      collectionID,
+      linksCollectionID,
       "Links",
       "collection",
       ["role:all"],
       ["role:all"]
     );
-    await database.createUrlAttribute(collectionID, "originalUrl", true);
-    await database.createStringAttribute(collectionID, "uniqueName", 255, true);
-    await database.createUrlAttribute(collectionID, "shortUrl", true);
+    await database.createUrlAttribute(linksCollectionID, "originalUrl", true);
+    await database.createStringAttribute(
+      linksCollectionID,
+      "uniqueName",
+      255,
+      true
+    );
+    await database.createUrlAttribute(linksCollectionID, "shortUrl", true);
     console.log("Links collection created");
   } catch (e) {
     console.log(e);
