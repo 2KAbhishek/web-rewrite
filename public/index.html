@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title> Web Rewrite </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <main class="inner-container">
+      <h1>Rewrite your <em>URL</em></h1>
+      <form>
+        <input type="text" placeholder="Original URL" name="originalURL" class='originalURL' />
+        <input type="text" class='baseURL' disabled />
+        <input type="text" placeholder="Unique Name" name="uniqueName" class='uniqueName' />
+        <input class="btn" type="submit" value="Create Link">
+      </form>
+      <div class="success">
+        <p>Your shortened link is<a class="short">shortened link</a> </p>
+      </div>
+      <div class="failure">
+        <p> The unique name has been used already </p>
+      </div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
