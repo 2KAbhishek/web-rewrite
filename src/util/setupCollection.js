@@ -21,7 +21,6 @@ const setupLinksCollection = async () => {
       true
     );
     await db.createUrlAttribute(linksCollectionID, "shortUrl", true);
-    await db.createIndex(linksCollectionID, "uniqueName", "key", ["uniqueName"]);
     console.log("Links collection created");
   } catch (e) {
     if (e.message.includes("already exists")) {
