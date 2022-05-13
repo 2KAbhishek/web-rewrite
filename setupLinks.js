@@ -1,19 +1,6 @@
-const {
-  host,
-  appWritePort,
-  projectID,
-  apiKey,
-  linksCollectionID,
-} = require("./src/util/env.js");
+const { linksCollectionID } = require("./src/util/env.js");
 
-const sdk = require("node-appwrite");
-
-const client = new sdk.Client();
-
-client
-  .setEndpoint(`http://${host}:${appWritePort}/v1`)
-  .setProject(projectID)
-  .setKey(apiKey);
+const { sdk, client } = require("./src/util/client.js");
 
 let database = new sdk.Database(client);
 
@@ -36,7 +23,11 @@ const setupLinksCollection = async () => {
     await database.createUrlAttribute(linksCollectionID, "shortUrl", true);
     console.log("Links collection created");
   } catch (e) {
-    console.log(e);
+    if (e.message.includes("already exists")) {
+      console.log("Links collection already exists");
+    } else {
+      console.log(e);
+    }
   }
 };
 
