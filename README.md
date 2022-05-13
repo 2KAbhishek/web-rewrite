@@ -47,6 +47,7 @@ Before you begin, ensure you have met the following requirements:
 
 - You have installed the latest version of `node`, `appwrite`
 - web-rewrite needs the following env vars to function correctly
+
 ```bash
 HOST=appwrite-console-host
 APPWRITE_PORT=80 #Port where appwrite console is running
@@ -63,7 +64,7 @@ To install web-rewrite, follow these steps:
 ```bash
 git clone https://github.com/2kabhishek/web-rewrite
 cd web-rewrite
-touch .env 
+touch .env
 npm run setup # Sets up the links collection in appwrite
 npm start
 ```
