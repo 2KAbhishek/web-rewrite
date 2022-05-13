@@ -1,6 +1,6 @@
-const { linksCollectionID } = require("./src/util/env");
+const { linksCollectionID } = require("./env");
 
-const { sdk, client } = require("./src/util/client");
+const { sdk, client } = require("./client");
 
 const db = new sdk.Database(client);
 
