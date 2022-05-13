@@ -23,7 +23,7 @@
 <a href="https://github.com/2KAbhishek?tab=followers">
 <img alt="Followers" src="https://img.shields.io/github/followers/2kabhishek?color=222&style=plastic&label=Followers"> </a>
 
-<h3>Short sweet headline with 🎇🎉</h3>
+<h3>Rewrite you URLs 🌏✏️</h3>
 
 <figure>
   <img src= "https://raw.githubusercontent.com/2KAbhishek/web-rewrite/main/images/screenshot.jpg" alt="web-rewrite Demo" style="width:100%">
@@ -35,17 +35,26 @@
 
 ## What is this
 
-web-rewrite is a `<utility/tool/feature>` that allows `<insert_target_audience>` to do `<action/task_it_does>`.
+web-rewrite is a utility that allows you to rewrite your URLs.
 
 ## Inspiration
 
-web-rewrite was inspired by `<reason/idea>`.
+I wanted to write my own url shortener and then came accross appwrite, which motivated me enough to do it.
 
 ## Prerequisites
 
 Before you begin, ensure you have met the following requirements:
 
-- You have installed the latest version of `<coding_language/dependency/requirement_1>`
+- You have installed the latest version of `node`, `appwrite`
+- web-rewrite needs the following env vars to function correctly
+```bash
+HOST=appwrite-console-host
+APPWRITE_PORT=80 #Port where appwrite console is running
+PROJECT_ID=project-id-from-appwrite-console
+API_KEY=api-key-from-appwrite-console
+APP_PORT=4321 # The port where you want web-rewrite to run
+LINKS_COLLECTION_ID=links-collection-id1 #Try changing this if setup fails
+```
 
 ## Getting web-rewrite
 
@@ -54,55 +63,43 @@ To install web-rewrite, follow these steps:
 ```bash
 git clone https://github.com/2kabhishek/web-rewrite
 cd web-rewrite
-<install_command>
+touch .env 
+npm run setup # Sets up the links collection in appwrite
+npm start
 ```
 
 ## Using web-rewrite
 
-```bash
-USAGE:
-    command [FLAGS] [OPTIONS]
-
-FLAGS:
-    -h, --help              Prints help information.
-
-OPTIONS:
-    -o, --option <value>    Option description.
-    Options are: a, b. [default: a]
-
-Example:
-
-
-```
+After starting the app you can visit the app through your browser.
 
 ## How it was built
 
-web-rewrite was built using `<tech/library>`
+web-rewrite was built using `node`, `express` and `appwrite`
 
 ## Challenges faced
 
-While building web-rewrite the main challenges were `<issue/difficulty>`
+While building web-rewrite the main challenges were:
+
+- Setting up AppWrite collections through node was tricky
 
 ## What I learned
 
-While building web-rewrite I `<learned/accomplished>` about `<learning/accomplishment>`
+- AppWrite and it's different services, will use it more in upcoming projects
+- Web routing
 
 ## What's next
 
-Planning to add `<feature/module>`.
+May deploy it somewhere soon
 
 ### To-Do
 
-- [x] Setup repo
-- [ ] Think real hard
-- [ ] Start typing
-- [ ] Change me
-- [ ] Update README
-- [ ] Finish it
+- [ ] Deploy web-rewrite
 
 Hit the ⭐ button if you found this useful.
 
 ## More Info
+
+- [AppWrite](https://appwrite.io)
 
 <div align="center">
 
