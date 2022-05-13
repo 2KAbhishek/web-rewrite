@@ -2,25 +2,25 @@ const { linksCollectionID } = require("./src/util/env.js");
 
 const { sdk, client } = require("./src/util/client.js");
 
-let database = new sdk.Database(client);
+const db = new sdk.Database(client);
 
 const setupLinksCollection = async () => {
   try {
-    await database.createCollection(
+    await db.createCollection(
       linksCollectionID,
       "Links",
       "collection",
       ["role:all"],
       ["role:all"]
     );
-    await database.createUrlAttribute(linksCollectionID, "originalUrl", true);
-    await database.createStringAttribute(
+    await db.createUrlAttribute(linksCollectionID, "originalUrl", true);
+    await db.createStringAttribute(
       linksCollectionID,
       "uniqueName",
       255,
       true
     );
-    await database.createUrlAttribute(linksCollectionID, "shortUrl", true);
+    await db.createUrlAttribute(linksCollectionID, "shortUrl", true);
     console.log("Links collection created");
   } catch (e) {
     if (e.message.includes("already exists")) {
