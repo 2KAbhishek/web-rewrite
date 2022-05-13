@@ -68,13 +68,14 @@ h1 {
 .success,
 .failure {
   display: none;
-  margin-top: 2rem;
-  font-size: 2rem;
+  margin: 2rem;
+  font-size: 1.5rem;
 }
 .success .short {
   display: block;
   font-size: 1.5rem;
-  font-style: italic;
   color: white;
   cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
 }
