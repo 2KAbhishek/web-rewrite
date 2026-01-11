@@ -20,7 +20,7 @@
 <a href="https://github.com/2KAbhishek/web-rewrite/pulse">
 <img alt="Last Updated" src="https://img.shields.io/github/last-commit/2kabhishek/web-rewrite?style=flat&color=e06c75&label="> </a>
 
-<h3>Rewrite you URLs 🌏✏️</h3>
+<h3>Rewrite your URLs 🌏✏️</h3>
 
 <figure>
   <img src= "https://raw.githubusercontent.com/2KAbhishek/web-rewrite/main/images/screenshot.jpg" alt="web-rewrite Demo" style="width:100%">
