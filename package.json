@@ -28,7 +28,7 @@
     "dotenv": "^16.0.1",
     "express": "^4.22.1",
     "node-appwrite": "^15.0.0",
-    "nodemon": "^2.0.16",
+    "nodemon": "^2.0.22",
     "uuid": "^8.3.2"
   }
 }
